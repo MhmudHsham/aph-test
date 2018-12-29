@@ -23,3 +23,5 @@ Route::group(["middleware"=>["auth"], "prefix" => "admin"], function() {
 
 
 Route::get('/', 'HomeController@index');
+Route::get('journals', "JournalController@index");
+Route::get('journals/details/{journal_id}', "JournalController@details");
